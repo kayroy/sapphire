@@ -1,4 +1,4 @@
-# Delete Expired SSH Account
+# Delete Expired 2 Account
 clear
                hariini=`date +%d-%m-%Y`
                echo "Thank you for removing the EXPIRED USERS"
