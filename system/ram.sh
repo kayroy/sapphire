@@ -26,7 +26,7 @@
 # V1.6      05 Jun 2007     Also report number of processes with a given name.
 #                           Patch from riccardo.murri@gmail.com
 # V1.7      20 Sep 2007     Use PSS from /proc/$pid/smaps if available, which
-#                           fixes some over-estimation and allows totalling.
+#                           fixes some over-estimation and allow totalling.
 #                           Enumerate the PIDs directly rather than using ps,
 #                           which fixes the possible race between reading
 #                           RSS with ps, and shared memory with this program.
@@ -57,7 +57,7 @@
 # In addition for 2.6 kernels up to 2.6.9 inclusive, the shared
 # value in /proc/$pid/statm is the total file-backed extent of a process.
 # We ignore that, introducing more overestimation, again printing a warning.
-# Since kernel 2.6.23-rc8-mm1 PSS is available in smaps, which allows
+# Since kernel 2.6.23-rc8-mm1 PSS is available in smaps, which allow
 # us to calculate a more accurate value for the total RAM used by programs.
 #
 # Programs that use CLONE_VM without CLONE_THREAD are discounted by assuming
