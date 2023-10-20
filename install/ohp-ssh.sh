@@ -28,7 +28,7 @@ chmod +x /usr/local/bin/ohps
 cat > /etc/systemd/system/ohps.service <<END
 [Unit]
 Description=Direct Squid Proxy For open-ssh
-Documentation=https://t.me/todfix667
+Documentation=lembu.com
 Wants=network.target
 After=network.target
 

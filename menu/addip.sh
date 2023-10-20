@@ -21,16 +21,7 @@ CYAN='\e[36m'
 LIGHT='\033[0;37m'
 tokengit=$(cat /etc/adminip/access.conf)
 MYIP=$(wget -qO- ipinfo.io/ip);
-adminip=$( curl -sS https://raw.githubusercontent.com/kayroy/allow/main/accessmenu | grep $MYIP )
-if [ $adminip = $MYIP ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-rm -rf addip.sh
-clear
-echo -e "${red}Permission Denied!${NC}";
-echo "OWNER AREA ONLY"
-exit 0
-fi
+a
 
 setadmin() {
 #isi link git

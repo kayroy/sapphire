@@ -14,8 +14,8 @@ ver=$VERSION_ID
 country="MY"
 state="Kuala_Lumpur"
 locality="Kuala_Lumpur"
-organization="@todfix667"
-organizationalunit="@todfix667"
+organization="@lembu"
+organizationalunit="@lembu"
 commonname="nevermore"
 email="admin@nevermore.com"
 
