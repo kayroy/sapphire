@@ -23,12 +23,12 @@ echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
 echo -e "$green.........................................................."$NC
 echo -e "$Lyellow                  Autoscript By kayroy"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @todfix667"$NC
+echo -e "$Lyellow                       @lembu"$NC
 echo -e "$green.........................................................."$NC
 echo ''
-echo -e "$Lyellow                       Wait 6 Seconds!"$NC
+echo -e "$Lyellow                       Wait !"$NC
 echo -e "$green.........................................................."$NC
-sleep 6
+sleep 1
 clear
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
@@ -41,47 +41,7 @@ fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-#IZIN SCRIPT
-MYIP=$(curl -sS ipv4.icanhazip.com)
-echo -e "\e[32mloading...\e[0m"
-clear
-# Valid Script
-VALIDITY() {
-    today=$(date -d "0 days" +"%Y-%m-%d")
-    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
-    if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT kayroy..\e[0m"
-        sleep 5
-    else
-        echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
-        echo -e "\e[31mPlease renew your ipvps first\e[0m"
-        exit 0
-    fi
-}
-# Valid Script
-VALIDITY() {
-    today=$(date -d "0 days" +"%Y-%m-%d")
-    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
-    if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT kayroy..\e[0m"
-        sleep 5
-    else
-        echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
-        echo -e "\e[31mPlease renew your ipvps first\e[0m"
-        exit 0
-    fi
-}
-IZIN=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-    echo -e "\e[32mPermission Accepted...\e[0m"
-    VALIDITY
-else
-    echo -e "\e[31mPermission Denied!\e[0m"
-    echo -e "\e[31mPlease buy script first\e[0m"
-    rm -f setup.sh
-    exit 0
-fi
-clear
+
 echo -e "\e[32mloading...\e[0m"
 clear
 mkdir /var/lib/premium-script;
@@ -90,55 +50,18 @@ clear
 #Nama penyedia script
 echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
 echo ""
-echo -e "   \e[1;32mPlease enter the name of Provider for Script."
-read -p "   Name : " nm
-echo $nm > /root/provided
+echo Lembu > /root/provided
 echo ""
-#Email domain
-echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
-echo -e ""
-echo -e "   \e[1;32mPlease enter your email Domain/Cloudflare."
-echo -e "   \e[1;31m(Press ENTER for default email)\e[0m"
-read -p "   Email : " email
-default=${default_email}
-new_email=$email
-if [[ $email == "" ]]; then
-sts=$default_email
-else
-sts=$new_email
-fi
+sts=kayroy46@gmail.com
 # email
 mkdir -p /usr/local/etc/xray/
 touch /usr/local/etc/xray/email
 echo $sts > /usr/local/etc/xray/email
 echo ""
-echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
-echo ""
-echo -e "   .----------------------------------."
-echo -e "   |\e[1;32mPlease select a domain type below \e[0m|"
-echo -e "   '----------------------------------'"
-echo -e "     \e[1;32m1)\e[0m Enter your Subdomain"
-echo -e "     \e[1;32m2)\e[0m Use a random Subdomain"
-echo -e "   ------------------------------------"
-read -p "   Please select numbers 1-2 or Any Button(Random) : " host
-echo ""
-if [[ $host == "1" ]]; then
 echo -e "   \e[1;32mPlease enter your subdomain "
 read -p "   Subdomain: " host1
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 echo $host1 > /root/domain
-echo ""
-elif [[ $host == "2" ]]; then
-#install cf
-wget https://raw.githubusercontent.com/${GitUser}/sapphire/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
-rm -f /root/cf.sh
-clear
-else
-echo -e "Random Subdomain/Domain is used"
-wget https://raw.githubusercontent.com/${GitUser}/sapphire/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
-rm -f /root/cf.sh
-clear
-fi
 echo ""
 clear
 echo -e "\e[0;32mREADY FOR INSTALLATION SCRIPT...\e[0m"
