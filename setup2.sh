@@ -111,12 +111,6 @@ sleep 1
 wget https://raw.githubusercontent.com/${GitUser}/sapphire/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 echo -e "\e[0;32mDONE INSTALLING SSH & OVPN\e[0m"
 clear
-#install Xray
-echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
-sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/sapphire/main/install/ins-xray2.sh && chmod +x ins-xray2.sh && screen -S ins-xray ./ins-xray2.sh
-echo -e "\e[0;32mDONE INSTALLING XRAY CORE\e[0m"
-clear
 #install ohp-server
 echo -e "\e[0;32mINSTALLING OHP PORT...\e[0m"
 sleep 1
